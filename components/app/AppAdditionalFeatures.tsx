@@ -23,6 +23,7 @@ export default function AppAdditionalFeatures() {
       icon: '/assets/icons/ai-assistant.png',
       title: 'AI assistant',
       description: 'Your personal assistant anytime',
+      scale: 2,
     },
     {
       icon: '/assets/icons/detect-colours.png',
@@ -72,6 +73,7 @@ export default function AppAdditionalFeatures() {
             src={feature.icon}
             alt={feature.title}
             className="w-14 h-14 object-contain"
+            style={{ transform: feature.scale ? `scale(${feature.scale})` : undefined }}
           />
           </div>
 

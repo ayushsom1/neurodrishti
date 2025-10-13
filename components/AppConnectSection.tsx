@@ -47,7 +47,7 @@ export default function AppConnectSection() {
                 <img
                   src="/assets/images/1D.png"
                   alt="Neurodrishti App Interface"
-                  className="w-full max-w-md lg:max-w-lg xl:max-w-xl scale-100"
+                  className="w-full max-w-md lg:max-w-lg xl:max-w-xl scale-150"
                 />
               </div>
             </Card>

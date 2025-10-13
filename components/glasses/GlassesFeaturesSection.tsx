@@ -31,6 +31,7 @@ export default function GlassesFeaturesSection() {
       icon: '/assets/icons/ai-assistant.png',
       title: 'AI assistant',
       description: 'Your smart assistant anytime.',
+      scale: 2,
     },
     {
       icon: '/assets/icons/voice-commands.png',
@@ -83,6 +84,7 @@ export default function GlassesFeaturesSection() {
                   alt={feature.title}
                   fill
                   className="object-contain"
+                  style={{ transform: feature.scale ? `scale(${feature.scale})` : undefined }}
                 />
               </div>
               <div className="text-xl font-bold mb-2">{feature.title}</div>
