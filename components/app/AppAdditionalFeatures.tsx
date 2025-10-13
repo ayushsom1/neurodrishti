@@ -55,7 +55,7 @@ export default function AppAdditionalFeatures() {
         Additional Features
         </p>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-        <span className="">There's a lot more to it</span>
+        <span className="">There&apos;s a lot more to it</span>
         </h2>
       </div>
 
