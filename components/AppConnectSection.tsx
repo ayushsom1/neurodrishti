@@ -7,23 +7,23 @@ import { Badge } from '@/components/ui/badge';
 
 export default function AppConnectSection() {
   return (
-    <section className="relative w-full bg-[#FFEDED] py-20 lg:py-0">
+    <section className="relative w-full bg-[#FFEDED] py-12 md:py-20 lg:py-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh] lg:min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center min-h-[80vh] lg:min-h-screen">
           {/* Left Content */}
           <div className="space-y-6">
             {/* Main Heading */}
-            <h2 className="text-black text-4xl md:text-5xl lg:text-6xl font-normal leading-tight">
+            <h2 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight">
               Connect seamlessly<br />with Neurodrishti App
             </h2>
 
             {/* Badge */}
-            <Badge variant="outline" className="border-black text-black text-sm px-4 py-2">
+            <Badge variant="outline" className="border-black text-black text-xs sm:text-sm px-3 sm:px-4 py-2">
               Available on Google Playstore
             </Badge>
 
             {/* Description */}
-            <p className="text-gray-700 text-lg md:text-2xl leading-relaxed max-w-lg">
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-lg">
               A simple interface designed to give you smarter, effortless control of your glasses.
             </p>
 

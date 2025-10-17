@@ -59,10 +59,10 @@ export default function SupportedBySection() {
   };
 
   return (
-    <section className="relative w-full bg-white py-20 overflow-hidden">
+    <section className="relative w-full bg-white py-12 md:py-16 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
-          className="space-y-12"
+          className="space-y-8 md:space-y-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -70,7 +70,7 @@ export default function SupportedBySection() {
         >
           {/* Title */}
           <motion.h2
-            className="text-center text-3xl md:text-4xl lg:text-5xl font-normal text-black"
+            className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-black"
             variants={titleVariants}
           >
             Supported by
@@ -78,7 +78,7 @@ export default function SupportedBySection() {
 
           {/* Logos Grid */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center justify-items-center"
+            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8 items-center justify-items-center"
             variants={containerVariants}
           >
             {supportedLogos.map((logo, index) => (
@@ -94,7 +94,7 @@ export default function SupportedBySection() {
                 <motion.img
                   src={logo}
                   alt={`Supported by partner ${index + 1}`}
-                  className="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                   initial={{ filter: 'grayscale(100%)' }}
                   whileHover={{
                     filter: 'grayscale(0%)',

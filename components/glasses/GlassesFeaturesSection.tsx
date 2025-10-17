@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function GlassesFeaturesSection() {
   const features = [
@@ -69,27 +70,31 @@ export default function GlassesFeaturesSection() {
     <section className="w-full bg-[#FF501B] px-8 py-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-4xl mb-4">Features</p>
-          <h2 className="text-6xl md:text-5xl font-weight-500">Complete All-in-one solution</h2>
-        </div>
+        <ScrollReveal direction="fade" delay={100}>
+          <div className="text-center mb-16">
+            <p className="text-4xl mb-4">Features</p>
+            <h2 className="text-6xl md:text-5xl font-weight-500">Complete All-in-one solution</h2>
+          </div>
+        </ScrollReveal>
 
         {/* Features Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 mb-4 relative">
-                <Image
-                  src={feature.icon}
-                  alt={feature.title}
-                  fill
-                  className="object-contain"
-                  style={{ transform: feature.scale ? `scale(${feature.scale})` : undefined }}
-                />
+            <ScrollReveal key={index} direction="up" delay={200 + (index * 80)}>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 mb-4 relative">
+                  <Image
+                    src={feature.icon}
+                    alt={feature.title}
+                    fill
+                    className="object-contain"
+                    style={{ transform: feature.scale ? `scale(${feature.scale})` : undefined }}
+                  />
+                </div>
+                <div className="text-xl font-bold mb-2">{feature.title}</div>
+                <p className="text-lg ">{feature.description}</p>
               </div>
-              <div className="text-xl font-bold mb-2">{feature.title}</div>
-              <p className="text-lg ">{feature.description}</p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

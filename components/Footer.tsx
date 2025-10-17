@@ -11,23 +11,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="space-y-6">
           {/* Main Heading */}
-          <h2 className="text-[#C5C4C4] text-3xl md:text-6xl lg:text-[100px] font-weight-400 leading-tight">
+          <h2 className="text-[#C5C4C4] text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-[100px] font-weight-400 leading-tight">
             Let&apos;s build something<br />great together
           </h2>
 
           {/* Email */}
-          <div className="flex items-center gap-2">
-            <Mail className="w-8 h-8 text-white/80" />
+          <div className="flex items-center gap-2 flex-wrap">
+            <Mail className="w-6 h-6 md:w-8 md:h-8 text-white/80 flex-shrink-0" />
             <a
               href="mailto:neurodrishti@gmail.com"
-              className="text-white text-base md:text-2xl hover:text-white/80 transition-colors"
+              className="text-white text-sm sm:text-base md:text-xl lg:text-2xl hover:text-white/80 transition-colors break-all"
             >
               neurodrishti@gmail.com
             </a>
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex items-center gap-10 pt-4">
+          <div className="flex items-center gap-6 md:gap-10 pt-4">
             {/* X (Twitter) */}
               <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <FaXTwitter className="w-15 h-15 text-white" />

@@ -1,55 +1,72 @@
 import Image from 'next/image';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function GlassesSpecsSection() {
   return (
-    <section className="w-full bg-black text-white ">
-      <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
+    <section className="w-full bg-black text-white">
+      <div className="grid grid-cols-1 md:grid-cols-[35%_1fr] min-h-[800px]">
         {/* Left side - Rotated Image */}
-        <div className="relative bg-gray-900 overflow-hidden">
-          <Image
-            src="/assets/images/glasses-4.jpg"
-            alt="NeuroDrishti Glasses Side View"
-            fill
-            className="object-cover -rotate-90"
-          />
+        <div className="relative bg-black flex items-center justify-center overflow-hidden">
+          <ScrollReveal direction="left" delay={100} className="w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-full max-h-[700px]">
+              <Image
+                src="/assets/images/glasses-4.jpg"
+                alt="NeuroDrishti Glasses Side View"
+                fill
+                className="object-contain -rotate-90 scale-120"
+              />
+            </div>
+          </ScrollReveal>
         </div>
 
         {/* Right side - Specifications */}
         <div className="z-10 flex flex-col justify-center px-8 md:px-16 py-12 z-10">
-          <h2 className="text-3xl md:text-4xl font-light mb-12 mx-auto">Specifications</h2>
+          <ScrollReveal direction="fade" delay={200}>
+            <h2 className="text-3xl md:text-4xl font-light mb-12 mx-auto">Specifications</h2>
+          </ScrollReveal>
 
           <div className="space-y-10">
             {/* Camera */}
-            <div>
-              <h3 className="text-3xl font-bold mb-4">Camera</h3>
-              <p className="text-white">An 8 MP camera that captures everything.</p>
-            </div>
+            <ScrollReveal direction="right" delay={300}>
+              <div>
+                <h3 className="text-3xl font-bold mb-4">Camera</h3>
+                <p className="text-white">An 8 MP camera that captures everything.</p>
+              </div>
+            </ScrollReveal>
 
             {/* Battery */}
-            <div>
-              <h3 className="text-3xl font-bold mb-4">Battery</h3>
-              <p className="text-gray-400">Can run 12 hours per day with magnetic charging.</p>
-            </div>
+            <ScrollReveal direction="right" delay={400}>
+              <div>
+                <h3 className="text-3xl font-bold mb-4">Battery</h3>
+                <p className="text-gray-400">Can run 12 hours per day with magnetic charging.</p>
+              </div>
+            </ScrollReveal>
 
             {/* Lightweight */}
-            <div>
-              <h3 className="text-3xl font-bold mb-4">Lightweight</h3>
-              <p className="text-gray-400">Weighs only 34 grams.</p>
-            </div>
+            <ScrollReveal direction="right" delay={500}>
+              <div>
+                <h3 className="text-3xl font-bold mb-4">Lightweight</h3>
+                <p className="text-gray-400">Weighs only 34 grams.</p>
+              </div>
+            </ScrollReveal>
 
             {/* Audio */}
-            <div>
-              <h3 className="text-3xl font-bold mb-4">Audio</h3>
-              <p className="text-gray-400">
-                Delivers superior audio quality with Active Noise Cancellation.
-              </p>
-            </div>
+            <ScrollReveal direction="right" delay={600}>
+              <div>
+                <h3 className="text-3xl font-bold mb-4">Audio</h3>
+                <p className="text-gray-400">
+                  Delivers superior audio quality with Active Noise Cancellation.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Wifi & Bluetooth */}
-            <div>
-              <h3 className="text-3xl font-bold mb-4">Wifi & Bluetooth</h3>
-              <p className="text-gray-400">Keeps you connected at all times</p>
-            </div>
+            <ScrollReveal direction="right" delay={700}>
+              <div>
+                <h3 className="text-3xl font-bold mb-4">Wifi & Bluetooth</h3>
+                <p className="text-gray-400">Keeps you connected at all times</p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>

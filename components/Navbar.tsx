@@ -29,8 +29,8 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#D9D9D9] backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#D9D9D9] backdrop-blur-md shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -39,7 +39,7 @@ export default function Navbar() {
               alt="Neurodrishti Logo"
               width={100}
               height={50}
-              className="h-auto"
+              className="h-auto w-20 sm:w-24 md:w-28"
               priority
             />
           </Link>
@@ -72,25 +72,25 @@ export default function Navbar() {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+                <Button variant="ghost" size="icon" className="text-black hover:bg-black/10">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
-                <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
+              <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-white">
+                <SheetHeader className="border-b pb-4">
+                  <SheetTitle className="text-left text-xl font-semibold">Menu</SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col gap-4 mt-8">
+                <div className="flex flex-col gap-2 mt-6">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-sm font-medium uppercase tracking-wide hover:text-gray-600 transition-colors"
+                      className="text-base font-medium uppercase tracking-wide text-gray-800 hover:text-orange-500 hover:bg-gray-50 transition-all px-4 py-3 rounded-lg"
                     >
                       {link.label}
                     </Link>
                   ))}
-                  <Button asChild className="mt-4">
+                  <Button asChild className="mt-6 bg-black text-white hover:bg-gray-800 py-6 text-base font-semibold">
                     <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeaWuSjh3ujG79BTLUjWYdp2dfoQ0k1HlxBy6L5hFRIfIeuQw/viewform?usp=header" target="_blank" rel="noopener noreferrer">Pre-Book Now</Link>
                   </Button>
                 </div>

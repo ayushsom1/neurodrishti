@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const faqs = [
   {
@@ -36,43 +37,49 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="relative w-full bg-white py-20">
+    <section className="relative w-full bg-white py-12 md:py-16 lg:py-20">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {/* Title */}
-          <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-normal text-black">
-            Frequently Asked Questions (FAQ)
-          </h2>
+          <ScrollReveal direction="fade" delay={100}>
+            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-black">
+              Frequently Asked Questions (FAQ)
+            </h2>
+          </ScrollReveal>
 
           {/* FAQ Accordion */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Left Column */}
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.slice(0, 3).map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border border-gray-300 rounded-md px-4">
-                  <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 text-sm md:text-base">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <ScrollReveal direction="left" delay={200}>
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.slice(0, 3).map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border border-gray-300 rounded-md px-4">
+                    <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-700 text-sm md:text-base">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </ScrollReveal>
 
             {/* Right Column */}
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.slice(3, 6).map((faq, index) => (
-                <AccordionItem key={index + 3} value={`item-${index + 3}`} className="border border-gray-300 rounded-md px-4">
-                  <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 text-sm md:text-base">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <ScrollReveal direction="right" delay={200}>
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.slice(3, 6).map((faq, index) => (
+                  <AccordionItem key={index + 3} value={`item-${index + 3}`} className="border border-gray-300 rounded-md px-4">
+                    <AccordionTrigger className="text-left text-base md:text-lg font-medium hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-700 text-sm md:text-base">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </ScrollReveal>
           </div>
         </div>
       </div>
