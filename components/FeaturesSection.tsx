@@ -78,16 +78,25 @@ export default function FeaturesSection() {
                                 playsInline
                                 preload="metadata"
                                 className="w-full h-auto object-cover rounded-lg cursor-pointer"
-                                onMouseEnter={(e) => e.currentTarget.play()}
+                                onMouseEnter={(e) => {
+                                  if (window.matchMedia('(hover: hover)').matches) {
+                                    e.currentTarget.play();
+                                  }
+                                }}
                                 onMouseLeave={(e) => {
-                                  e.currentTarget.pause();
-                                  e.currentTarget.currentTime = 0;
+                                  if (window.matchMedia('(hover: hover)').matches) {
+                                    e.currentTarget.pause();
+                                    e.currentTarget.currentTime = 0;
+                                  }
                                 }}
                                 onClick={(e) => {
-                                  if (e.currentTarget.paused) {
-                                    e.currentTarget.play();
+                                  const video = e.currentTarget;
+                                  if (video.paused) {
+                                    video.play().catch((error) => {
+                                      console.log('Play failed:', error);
+                                    });
                                   } else {
-                                    e.currentTarget.pause();
+                                    video.pause();
                                   }
                                 }}
                               />
@@ -141,16 +150,25 @@ export default function FeaturesSection() {
                                 playsInline
                                 preload="metadata"
                                 className="w-full h-auto object-cover rounded-lg cursor-pointer"
-                                onMouseEnter={(e) => e.currentTarget.play()}
+                                onMouseEnter={(e) => {
+                                  if (window.matchMedia('(hover: hover)').matches) {
+                                    e.currentTarget.play();
+                                  }
+                                }}
                                 onMouseLeave={(e) => {
-                                  e.currentTarget.pause();
-                                  e.currentTarget.currentTime = 0;
+                                  if (window.matchMedia('(hover: hover)').matches) {
+                                    e.currentTarget.pause();
+                                    e.currentTarget.currentTime = 0;
+                                  }
                                 }}
                                 onClick={(e) => {
-                                  if (e.currentTarget.paused) {
-                                    e.currentTarget.play();
+                                  const video = e.currentTarget;
+                                  if (video.paused) {
+                                    video.play().catch((error) => {
+                                      console.log('Play failed:', error);
+                                    });
                                   } else {
-                                    e.currentTarget.pause();
+                                    video.pause();
                                   }
                                 }}
                               />
