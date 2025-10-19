@@ -72,14 +72,23 @@ export default function FeaturesSection() {
                             {feature.video ? (
                               <video
                                 src={feature.video}
+                                poster={feature.image}
                                 muted
                                 loop
                                 playsInline
+                                preload="metadata"
                                 className="w-full h-auto object-cover rounded-lg cursor-pointer"
                                 onMouseEnter={(e) => e.currentTarget.play()}
                                 onMouseLeave={(e) => {
                                   e.currentTarget.pause();
                                   e.currentTarget.currentTime = 0;
+                                }}
+                                onClick={(e) => {
+                                  if (e.currentTarget.paused) {
+                                    e.currentTarget.play();
+                                  } else {
+                                    e.currentTarget.pause();
+                                  }
                                 }}
                               />
                             ) : (
@@ -126,14 +135,23 @@ export default function FeaturesSection() {
                             {feature.video ? (
                               <video
                                 src={feature.video}
+                                poster={feature.image}
                                 muted
                                 loop
                                 playsInline
+                                preload="metadata"
                                 className="w-full h-auto object-cover rounded-lg cursor-pointer"
                                 onMouseEnter={(e) => e.currentTarget.play()}
                                 onMouseLeave={(e) => {
                                   e.currentTarget.pause();
                                   e.currentTarget.currentTime = 0;
+                                }}
+                                onClick={(e) => {
+                                  if (e.currentTarget.paused) {
+                                    e.currentTarget.play();
+                                  } else {
+                                    e.currentTarget.pause();
+                                  }
                                 }}
                               />
                             ) : (
