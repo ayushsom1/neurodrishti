@@ -4,32 +4,27 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 export default function ProductStyleSection() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-gray-100 to-gray-200 py-12 md:py-16 lg:py-0">
-      <div className="mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="min-h-[60vh] md:min-h-[80vh] lg:min-h-screen flex items-center justify-center">
-          <ScrollReveal direction="up" delay={100}>
-            <div className="relative w-full max-w-6xl">
-              {/* Text Overlay */}
-              <ScrollReveal direction="left" delay={200}>
-                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 md:top-12 md:left-12 z-10">
-                  <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight drop-shadow-lg">
-                    Made to fit your<br />everyday style
-                  </h2>
-                </div>
-              </ScrollReveal>
+    <section className="relative w-full bg-gradient-to-br from-gray-100 to-gray-200 py-16 md:py-24">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="relative w-full max-w-6xl mx-auto">
+          {/* Glasses Image */}
+          <img
+            src="/assets/images/1C.png"
+            alt="NeuroDrishti Glasses Side View"
+            className="w-full h-auto rounded-lg"
+          />
 
-              {/* Glasses Image */}
-              <div className="relative w-full">
-                <img
-                  src="/assets/images/1C.png"
-                  alt="NeuroDrishti Glasses Side View"
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-          </ScrollReveal>
+          {/* Text Overlay - Top Right Corner */}
+          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 lg:top-10 lg:left-12 z-10">
+            <ScrollReveal direction="left" delay={200}>
+              <h2 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-weight-500 leading-tight text-left ">
+                Made to fit your<br />everyday style
+              </h2>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+

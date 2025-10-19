@@ -61,34 +61,27 @@ export default function GlassesHeroSection() {
       <div className="absolute inset-0 bg-black/30 z-10" />
       <ScrollReveal direction="right" delay={100}>
         <div
-          className="absolute top-20 right-10 z-20 flex flex-col items-end text-right px-6 py-4 rounded-xl"
-        >
+          className="absolute top-20 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-20 flex flex-col items-center md:items-end text-center md:text-right px-6 py-4 rounded-xl w-auto max-w-md md:max-w-2xl" >
           <h1
-            className="mb-1"
+            className="mb-1 text-[22px] md:text-[41px] leading-[40px] md:leading-[60px]"
             style={{
           fontFamily: 'Instrument Sans, sans-serif',
           fontWeight: 500,
           fontStyle: 'normal',
-          fontSize: '41px',
-          lineHeight: '60px',
           letterSpacing: '-4%',
-          textAlign: 'right',
           color: '#000',
             }}
           >
             NeuroDrishti Smart Glasses
           </h1>
           <p
+            className="text-gray-600 text-[20px] md:text-[41px] leading-[40px] md:leading-[60px]"
             style={{
           fontFamily: 'Instrument Sans, sans-serif',
           fontWeight: 400,
           fontStyle: 'normal',
-          fontSize: '41px',
-          lineHeight: '60px',
           letterSpacing: '-4%',
-          textAlign: 'right',
             }}
-            className="text-gray-600"
           >
             Your Everyday assistive support.
           </p>
@@ -97,4 +90,6 @@ export default function GlassesHeroSection() {
     </section>
   );
 }
+
+
 

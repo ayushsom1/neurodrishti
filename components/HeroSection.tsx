@@ -67,14 +67,14 @@ export default function HeroSection() {
 
 
           {/* Main Heading */}
-          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 leading-tight tracking-wide px-4 font-[family-name:var(--font-inria-sans)] whitespace-nowrap overflow-x-auto">
+          <h1 className="text-white text-xl sm:text-2xl md:text-3xl mb-8 md:mb-12 tracking-[0.05em] px-4 font-[family-name:var(--font-inria-sans)] break-words">
             {words.map((word, index) => (
               <span
                 key={index}
-                className="inline-block animate-[slideInWord_1s_ease-out_forwards] opacity-0"
-                style={{ animationDelay: `${index * 250}ms` }}
+                className="inline-block animate-[revealFadeIn_0.8s_ease-out_forwards] opacity-0 mr-3"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                {word}{index < words.length - 1 ? '\u00A0' : ''}
+                {word}
               </span>
             ))}
           </h1>
@@ -88,3 +88,5 @@ export default function HeroSection() {
         </>
   );
 }
+
+

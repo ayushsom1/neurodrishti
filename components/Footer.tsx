@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="space-y-6">
           {/* Main Heading */}
-          <h2 className="text-[#C5C4C4] text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-[100px] font-weight-400 leading-tight">
+          <h2 className="text-[#C5C4C4] text-7xl xl:text-[100px] font-weight-400 leading-tight">
             Let&apos;s build something<br />great together
           </h2>
 
