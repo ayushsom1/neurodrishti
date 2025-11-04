@@ -30,7 +30,7 @@ export default function GlassesLightweightSection() {
         <ScrollReveal direction="right" delay={200}>
           <div className="relative h-[400px] md:h-full mx-2">
             <Image
-              src="/assets/images/Glasses-2.png"
+              src="/assets/images/glasses2.png"
               alt="Lightweight glasses being held"
               fill
               className="object-contain"
