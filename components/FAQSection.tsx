@@ -40,7 +40,7 @@ export default function FAQSection() {
     <section className="relative w-full bg-white py-12 md:py-16 lg:py-20">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="space-y-8 md:space-y-12">
-          {/* Title */}
+        
           <ScrollReveal direction="fade" delay={100}>
             <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-black">
               Frequently Asked Questions (FAQ)
