@@ -33,11 +33,11 @@ export default function TestimonialsSection() {
         </ScrollReveal>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center items-stretch">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={index} direction="up" delay={index * 150}>
               <div
-                className="bg-[#D9D9D9] w-full max-w-[300px] rounded-3xl p-6 md:p-8 border border-black"
+                className="bg-[#D9D9D9] w-full max-w-[300px] h-full rounded-3xl p-6 md:p-8 border border-black flex flex-col"
               >
                 {/* Name and Location */}
                 <h4 className="text-2xl md:text-3xl font-normal mb-1">
