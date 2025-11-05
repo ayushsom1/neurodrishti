@@ -4,14 +4,14 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 export default function ProductStyleSection() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-gray-100 to-gray-200 py-16 md:py-24">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="relative w-full max-w-6xl mx-auto">
+    <section className="relative w-full bg-gradient-to-br from-gray-100 to-gray-200 py-8">
+      <div className="container mx-auto px-3 ">
+        <div className="relative w-full">
           {/* Glasses Image */}
           <img
             src="/assets/images/1C.png"
             alt="NeuroDrishti Glasses Side View"
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-lg "
           />
 
           {/* Text Overlay - Top Right Corner */}
